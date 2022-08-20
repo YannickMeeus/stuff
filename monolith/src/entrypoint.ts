@@ -1,14 +1,3 @@
-// So apparently fly.io has an issue when smashing their internal DNS server to pulp...
-//  In order to sidestep absolutely breaking their *free* service I am taking advantage of..
-//  I'll be monkey-patching node's dns module by wrapping a cache around it.
-//  That's right... I am adding a naive cache around DNS, what could possibly go wrong?
-
-// Everything
-
-// Everything could go wrong
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-
 import { randomUUID } from "crypto";
 import { config } from "dotenv";
 
