@@ -23,3 +23,18 @@ Deeper planning can and should go into your architectural design such that you'r
 Those windfalls usually take the form of rapid composability of existing functionality, ease of testing, ease of safe change.
 So with that, I'll continue to experiment with a structure that's started to come out of some other side-projects, and one that I've started applying at work as well.
 It doesn't rely on an explicit framework, per se, but rather on a few core principles that can be pulled straight out of [the big blue book](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215).
+
+## Wants and Needs
+
+This is a project *for me* to practice established skills and to learn new ones. I might swap in and out different languages as part of a more polyglot setup, I might use different databases because that always works out so well.
+
+Ultimately, this project will serve to scratch various itches and to be a platform to try out new stuff.
+Use with caution, there is absolutely no guarantee of stability unless that is a particular skill I'm looking to exercise, such as reliability engineering.
+That'd probably do it
+
+## Design Principles
+
+I don't have a strong scoped domain in mind, this will very much grow organically. I aim to keep a clear separation of concerns going, by leveraging
+types, the compiler, and constructor injection/partially applied functions closing over runtime dependencies.
+
+It will also be a loose adaptation of ports & adaptors/clean architecture. I have grown to love the modularity this provides, while allowing for the code to be incredibly expressive at the higher levels of abstraction, and laser-focused at the lower levels.
