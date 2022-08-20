@@ -9,7 +9,7 @@
     "prebuild": "yarn clean",
     "start": "node ./dist/entrypoint.js",
     "tsc": "tsc -p tsconfig.json --noEmit --watch",
-    "dev": "ts-node-dev --respawn --transpile-only src/entrypoint.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --inspect=9229 src/entrypoint.ts",
     "test": "yarn unit && yarn int && yarn e2e",
     "unit": "jest -c jest.config.unit.js",
     "int": "jest -c jest.config.int.js",
@@ -19,11 +19,11 @@
     "fmt": "eslint . --ext .ts --fix"
   },
   "dependencies": {
-    "@coderspirit/nominal": "^3.0.0",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.4.4"
   }
 }

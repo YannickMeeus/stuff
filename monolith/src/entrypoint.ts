@@ -17,7 +17,6 @@ import { config } from "dotenv";
     const serverPort = process.env.PORT || 3000;
     const apiKey = process.env.API_KEY || randomUUID();
 
-
     // console.log("---- Workers ----");
 
     // // eslint-disable-next-line @typescript-eslint/no-unused-vars
