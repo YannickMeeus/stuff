@@ -1,0 +1,29 @@
+{
+  "name": "monolith",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yannick Meeus",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./dist .tsbuildinfo",
+    "prebuild": "yarn clean",
+    "start": "node ./dist/entrypoint.js",
+    "tsc": "tsc -p tsconfig.json --noEmit --watch",
+    "dev": "ts-node-dev --respawn --transpile-only src/entrypoint.ts",
+    "test": "yarn unit && yarn int && yarn e2e",
+    "unit": "jest -c jest.config.unit.js",
+    "int": "jest -c jest.config.int.js",
+    "e2e": "jest -c jest.config.e2e.js --runInBand",
+    "build": "tsc -p ./tsconfig.build.json",
+    "lint": "eslint . --ext .ts --max-warnings=0",
+    "fmt": "eslint . --ext .ts --fix"
+  },
+  "dependencies": {
+    "@coderspirit/nominal": "^3.0.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "typescript": "^4.4.4"
+  }
+}
