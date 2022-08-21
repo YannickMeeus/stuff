@@ -1,21 +1,9 @@
 import { randomUUID } from "crypto";
-import { config } from "dotenv";
 
 (async () => {
   try {
-    if (process.env.NODE_ENV !== "production") {
-      const configurationLoadingResult = config();
-      if (configurationLoadingResult.error) {
-        throw configurationLoadingResult.error;
-      }
-      console.log("---- DEV MODE ----");
-      console.log("---- Configuration Loaded ----");
-      console.log(configurationLoadingResult.parsed);
-      console.log("------------------------------");
-    }
 
     const serverPort = process.env.PORT || 3000;
-    const apiKey = process.env.API_KEY || randomUUID();
 
     // console.log("---- Workers ----");
 
